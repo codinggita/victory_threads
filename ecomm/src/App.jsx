@@ -1,15 +1,13 @@
-import React from 'react'
-import Navbar from './components/navbar/navbar'
-import HomePage from './components/Home/Home'
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import router from './router';
 
 const App = () => {
   return (
-    <>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <Navbar/>
-    <HomePage/>
-    </>
-  )
+    <Router>
+      {router}
+    </Router>
+  );
 }
 
-export default App
+export default App;
