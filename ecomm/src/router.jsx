@@ -21,7 +21,7 @@ const router = (
     <Route path="/wishlist" element={<Wishlist />} />
     <Route path="/about" element={<About />} />
     <Route path="/login" element={<LoginForm/>} />
-    <Route path="signup" element={<Signup/>} />
+    <Route path="/signup" element={<Signup/>} />
     {/* Add more routes if needed */}
     <Route path="*" element={<Error />} />
   </Routes>
