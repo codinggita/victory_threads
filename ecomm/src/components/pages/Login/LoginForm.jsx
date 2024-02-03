@@ -73,7 +73,7 @@ const LoginForm = () => {
        
         <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
           Not registered?{' '}
-          <Link to="/signup" className={`text-blue-700 hover:underline dark:text-blue-500`}>
+          <Link to="#" className={`text-blue-700 hover:underline dark:text-blue-500`}>
             Create account
           </Link>
         </div>
