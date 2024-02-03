@@ -1,4 +1,4 @@
 [[redirects]]
   from = "/*"
-  to = "/src/App.jsx"
+  to = "/src/components/pages/Home/Home.jsx"
   status = 200
