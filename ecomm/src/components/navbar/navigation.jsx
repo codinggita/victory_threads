@@ -1,21 +1,40 @@
 import { Fragment } from 'react'
+import { useState, useEffect } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, HeartIcon, ShoppingCartIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
-  { name: 'Custom', href: '/Custom', current: false },
-  { name: 'Trending', href: '#', current: false }
+  { name: 'Custom', href: '/custom', current: false },
+  { name: 'Category', href: '#', current: false }
 ]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
+  
 }
 
 export default function Navbar() {
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 0;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
   return (
-    <div className=' rounded-lg shadow mx-0'>
+    <div className={`rounded-lg shadow mx-0 ${scrolled ? 'fixed top-0 left-0 right-0 z-50 bg-gray-800' : ''}`}>
     <Disclosure as="nav" className="bg-gray-800 p-2">
       {({ open }) => (
         <>
@@ -35,7 +54,7 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <h1 className="text-2xl font-bold text-blue-500">VictoryThreads</h1>
+                  <h1 className="sm:ml-4 sm:block text-2xl font-bold text-blue-500">VictoryThreads</h1>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
@@ -122,7 +141,7 @@ export default function Navbar() {
                       <Menu.Item>
                         {({ active }) => (
                           <Link
-                            to ="/Login"
+                            to ="/login"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Sign out
