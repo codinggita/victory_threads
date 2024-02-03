@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // import { auth } from '../../../firebase'
 
 
-const Signup = () =>  {
+const signup = () =>  {
 
   // const [values, setValues ] = useState({
   //   name: "",
@@ -111,4 +111,4 @@ const Signup = () =>  {
   );
 };
 
-export default Signup;
+export default signup;
