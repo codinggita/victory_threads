@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // import { auth } from '../../../firebase'
 
 
-function Signup ()  {
+const Signup = () =>  {
 
   // const [values, setValues ] = useState({
   //   name: "",
