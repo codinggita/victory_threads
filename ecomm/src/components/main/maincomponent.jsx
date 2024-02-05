@@ -3,6 +3,8 @@ import React from 'react';
 import { useState } from 'react';
 import Card from '../card/Card';
 import Wishlist from '../pages/wishlist/Wishlist';
+import { Link, useNavigate } from "react-router-dom";
+
 const items = [
   // Your list of items here
   // ...
@@ -10,7 +12,7 @@ const items = [
   // The provided list of items
   {
     id: '001',
-    src:"",
+    image:'images/messi.jpg',
     company: 'Nike',
     item_name: 'FC Barcelona Retro Messi Jersey',
     original_price: 2999,
@@ -25,9 +27,9 @@ const items = [
   },
   {
     id: '002',
-    image: 'images/ManU.jpg',
+    image: 'images/ronaldo.jpg',
     company: 'Nike',
-    item_name: 'Manchester United Ronaldo Jersey',
+    item_name: 'Manchester United Ronaldo',
     original_price: 2999,
     current_price: 1699,
     discount_percentage: 43,
@@ -40,9 +42,9 @@ const items = [
   },
   {
     id: '003',
-    image: 'images/18.jpg',
-    company: 'Cricket',
-    item_name: 'Virat Kohli 18',
+    image: 'images/chelsea.jpg',
+    company: 'Football',
+    item_name: 'Chelsea Retro jersey',
     original_price: 2999,
     current_price: 1699,
     discount_percentage: 43,
@@ -55,9 +57,9 @@ const items = [
   },
   {
     id: '005',
-    image: 'images/indian.avif',
+    image: 'images/realmadrid.jpeg',
     company: 'Adidas',
-    item_name: 'India Official ODI Adidas Mens Shirt',
+    item_name: 'Real Madrid retro jersey',
     original_price: 2999,
     current_price: 1899,
     discount_percentage: 37,
@@ -70,9 +72,9 @@ const items = [
 },
 {
     id: '006',
-    image: 'images/indian2.avif',
+    image: 'images/manunited.jpg',
     company: 'Fanatics',
-    item_name: 'India Cricket World Cup Team Graphic Hoodie',
+    item_name: 'Manchester United Retro',
     original_price: 6999,
     current_price: 3999,
     discount_percentage: 42,
@@ -86,9 +88,9 @@ const items = [
 
 {
     id: '007',
-    image: 'images/Barcelona-away.webp',
+    image: 'images/arsenal.jpg',
     company: 'Puma',
-    item_name: 'Virat kohli 18 IPL jersey',
+    item_name: 'Arsenal Retro Jersey',
     original_price: 2599,
     current_price: 1299,
     discount_percentage: 50,
@@ -99,9 +101,9 @@ const items = [
 },
 {
     id: '008',
-    image: 'images/psg.jpg',
+    image: 'images/argentina.jpg',
     company: 'Nike',
-    item_name: 'PSG Jordan Fourth Kit 2022-23',
+    item_name: 'Argentina Retro jersey',
     original_price: 1899,
     current_price: 899,
     discount_percentage: 50,
@@ -117,6 +119,7 @@ const items = [
 
 const MainComponent = () => {
   const [wishlist, setWishlist] = useState([]);
+  const navigate = useNavigate();
 
   const addToWishlist = (item) => {
     console.log("Added to wishlist:", item);
@@ -124,10 +127,17 @@ const MainComponent = () => {
       setWishlist([...wishlist, item]);
     }
   };
+
+  const handleCardClick = (itemId) => {
+    // Navigate to the product details page
+    navigate(`/product/${itemId}`);
+  };
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center ml-2 mr-5">
+    <div className="grid grid-cols-1 w-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 justify-center mx-2 mr-8" style={{ backgroundColor: '#1f2937' }}>
       {items.map((item) => (
-        <Card key={item.id} item={item} addToWishlist={() => addToWishlist(item)} />
+        
+        <Card key={item.id} item={item} addToWishlist={() => addToWishlist(item)} onCardClick={handleCardClick}/>
+      
       ))}
       <Wishlist wishlistItems={wishlist} />
     </div>

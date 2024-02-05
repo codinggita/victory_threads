@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../../navbar/navigation'
-import Footer from '../../footer/footer'
-import Custommain from '../../main/Custommain'
+import Footer from '../../footer/Footer'
+
 
 const Custom = () => {
   return (
