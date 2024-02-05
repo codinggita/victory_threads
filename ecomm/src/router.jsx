@@ -9,6 +9,7 @@ import Wishlist from "./components/pages/wishlist/Wishlist";
 import Error from "./components/pages/error/Error";
 import LoginForm from './components/pages/Login/LoginForm';
 import Signup from './components/pages/Signup/Signup';
+import Product from './components/Product_details/Product';
 
 
 
@@ -23,6 +24,7 @@ const router = (
     <Route path="/about" element={<About />} />
     <Route path="/login" element={<LoginForm/>} />
     <Route path="/signup" element={<Signup/>}/>
+    <Route path="/product" element={<Product/>}/>
     {/* Add more routes if needed */}
     <Route path="*" element={<Error />} />
   </Routes>
