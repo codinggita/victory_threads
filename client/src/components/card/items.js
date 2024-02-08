@@ -1,0 +1,213 @@
+export const items = [
+  {
+      id: '001',
+      image: '/images/messi.jpg',
+      company: 'Nike',
+      item_name: 'FC Barcelona Retro Messi Jersey',
+      original_price: 2999,
+      current_price: 1649,
+      discount_percentage: 45,
+      return_period: 14,
+      delivery_date: '5 Nov 2023',
+      rating: {
+          stars: 4.5,
+          count: 1400,
+      },
+  },
+  {
+      id: '002',
+      image: '/images/ronaldo.jpg',
+      company: 'Nike',
+      item_name: 'Ronaldo Retro Jersey',
+      original_price: 2999,
+      current_price: 1699,
+      discount_percentage: 43,
+      return_period: 14,
+      delivery_date: '6 Nov 2023',
+      rating: {
+          stars: 4.4,
+          count: 24,
+      },
+  },
+  {
+      id: '003',
+      image: '/images/realmadrid.jpeg',
+      company: 'Cricket',
+      item_name: 'Realmadrid jersey',
+      original_price: 2999,
+      current_price: 1699,
+      discount_percentage: 43,
+      return_period: 14,
+      delivery_date: '6 Nov 2023',
+      rating: {
+          stars: 4.4,
+          count: 390,
+      },
+
+  },
+  
+  {
+      id: '004',
+      image: '/images/manunited.jpg',
+      company: 'Nike',
+      item_name: 'Manchester United retro jersey',
+      original_price: 1899,
+      current_price: 999,
+      discount_percentage: 48,
+      return_period: 14,
+      delivery_date: '10 Oct 2023',
+      rating: {
+          stars: 5.0,
+          count: 10,
+      },
+  },
+  {
+      id: '005',
+      image: '/images/chelsea.jpg',
+      company: 'Adidas',
+      item_name: 'Chelsea Retro jersey',
+      original_price: 2999,
+      current_price: 1899,
+      discount_percentage: 37,
+      return_period: 14,
+      delivery_date: '10 Oct 2023',
+      rating: {
+          stars: 4.3,
+          count: 3500,
+      },
+  },
+  {
+      id: '006',
+      image: '/images/arsenal.jpg',
+      company: 'Fanatics',
+      item_name: 'Arsenal retro jersey',
+      original_price: 6999,
+      current_price: 3999,
+      discount_percentage: 42,
+      return_period: 14,
+      delivery_date: '10 Oct 2023',
+      rating: {
+          stars: 4.3,
+          count: 10,
+      },
+  },
+ 
+  {
+      id: '007',
+      image: '/images/argentina.jpg',
+      company: 'Puma',
+      item_name: 'Argentina Retro jersey',
+      original_price: 2599,
+      current_price: 1299,
+      discount_percentage: 50,
+      rating: {
+          stars: 4.4,
+          count: 388,
+      },
+  }
+  
+];
+
+export const items2 = [
+
+  {
+      id: '001',
+      image: 'images/2.webp',
+      company: 'Nike',
+      item_name: 'FC Barcelona Retro Messi Jersey',
+      original_price: 1999,
+      current_price: 1249,
+      discount_percentage: 35,
+      return_period: 14,
+      delivery_date: '5 Nov 2023',
+      rating: {
+          stars: 4.5,
+          count: 400,
+      },
+  },
+  {
+      id: '002',
+      image: 'images/1.webp',
+      company: 'Nike',
+      item_name: 'ENT sports jersey',
+      original_price: 1899,
+      current_price: 999,
+      discount_percentage: 48,
+      return_period: 14,
+      delivery_date: '10 Oct 2023',
+      rating: {
+          stars: 5.0,
+          count: 10,
+      },
+  },
+  {
+      id: '003',
+      image: 'images/3.webp',
+      company: 'Adidas',
+      item_name: 'India Official ODI Adidas Mens Shirt',
+      original_price: 2999,
+      current_price: 1899,
+      discount_percentage: 37,
+      return_period: 14,
+      delivery_date: '10 Oct 2023',
+      rating: {
+          stars: 4.3,
+          count: 3500,
+      },
+  },
+  {
+      id: '004',
+      image: 'images/4.webp',
+      company: 'Fanatics',
+      item_name: 'India Cricket World Cup Team Graphic Hoodie',
+      original_price: 6999,
+      current_price: 3999,
+      discount_percentage: 42,
+      return_period: 14,
+      delivery_date: '10 Oct 2023',
+      rating: {
+          stars: 4.3,
+          count: 10,
+      },
+  },
+ 
+  {
+      id: '005',
+      image: 'images/5.webp',
+      company: 'Puma',
+      item_name: 'Virat kohli 18 IPL jersey',
+      original_price: 2599,
+      current_price: 1299,
+      discount_percentage: 50,
+      rating: {
+          stars: 4.4,
+          count: 388,
+      },
+  },
+  {
+      id: '006',
+      image: 'images/messi.jpg',
+      company: 'Puma',
+      item_name: 'Virat kohli 18 IPL jersey',
+      original_price: 2599,
+      current_price: 1299,
+      discount_percentage: 50,
+      rating: {
+          stars: 4.4,
+          count: 388,
+      },
+  },
+  {
+      id: '007',
+      image: 'images/ronaldo.jpg',
+      company: 'Puma',
+      item_name: 'Virat kohli 18 IPL jersey',
+      original_price: 2599,
+      current_price: 1299,
+      discount_percentage: 50,
+      rating: {
+          stars: 4.4,
+          count: 388,
+      },
+  }
+]
